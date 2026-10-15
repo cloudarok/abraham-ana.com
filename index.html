@@ -1,0 +1,1500 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#FFFFFF">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://abraham-ana.com/">
+<meta property="og:title" content="Ana &amp; Abraham — 10.26.2026">
+<meta property="og:description" content="Join us at the Santa Barbara Courthouse.">
+<meta property="og:image" content="https://abraham-ana.com/og-image.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="A black wax seal with the monogram A &amp; A above the names Ana &amp; Abraham">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Ana &amp; Abraham — 10.26.2026">
+<meta name="twitter:description" content="Join us at the Santa Barbara Courthouse.">
+<meta name="twitter:image" content="https://abraham-ana.com/og-image.jpg">
+<link rel="icon" type="image/png" href="apple-touch-icon.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<title>Ana &amp; Abraham — 10.26.2026</title>
+<meta name="description" content="Join us at the Santa Barbara Courthouse.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:ital,wght@0,400;1,400&display=swap">
+<style>
+/* Layout: one narrow column on white paper. Sand bands hold the practical sections;
+   deep black is kept for the wax seal, the RSVP pill and the closing band. The
+   courthouse's Great Arch shapes the RSVP card. One light theme on purpose: this is
+   a letterpress-style invitation, so every color below is set explicitly. */
+:root {
+  --paper: #FFFFFF;
+  --sand: #EEE5D8;
+  --sand-deep: #CDBBA0;
+  --beige: #DCCCB2;
+  --hairline: #E7DFD3;
+  --ink: #151311;
+  --ink-soft: #5F574E;
+  --placeholder: #8F857A;
+  --on-ink: #F4EEE5;
+  --gold: #D6C3A0;
+  --alert: #8E2A1E;
+  --shadow: rgba(21, 19, 17, .5);
+  --focus: rgba(21, 19, 17, .14);
+
+  --env-inside: #E4D9C9;
+  --env-side: #F6F1EA;
+  --env-front: #FBF8F3;
+  --env-flap: #F5EFE6;
+  --env-flap-tip: #ECE3D5;
+  --env-edge: #D8CBB7;
+  --env-shadow: rgba(70, 52, 32, .22);
+  --wax-hi: #4D463F;
+  --wax-mid: #221E1B;
+  --wax-lo: #0B0A09;
+  --wax-sheen: rgba(255, 255, 255, .14);
+
+  --font-display: "Playfair Display", "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  --font-body: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --label: 700 .72rem/1.3 var(--font-body);
+  --ease-out: cubic-bezier(.2, .7, .2, 1);
+  --grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .37 0 0 0 0 .31 0 0 0 0 .24 0 0 0 .1 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23g)'/%3E%3C/svg%3E");
+  color-scheme: light;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+[hidden] { display: none !important; }
+html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font: 400 1.0625rem/1.65 var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+img, svg { max-width: 100%; }
+a { color: inherit; }
+h1, h2, h3 { margin: 0; font-family: var(--font-display); font-weight: 400; text-wrap: balance; font-variant-numeric: lining-nums; }
+p { margin: 0; text-wrap: pretty; }
+:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }
+[tabindex="-1"]:focus { outline: none; }
+.visually-hidden {
+  position: absolute !important; width: 1px; height: 1px; overflow: hidden;
+  clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap;
+}
+.show-envelope, .show-envelope body { overflow: hidden; }
+
+/* Details still to be filled in */
+.tbd {
+  text-decoration-line: underline;
+  text-decoration-style: dashed;
+  text-decoration-color: var(--sand-deep);
+  text-decoration-thickness: 1px;
+  text-underline-offset: .22em;
+  color: var(--ink-soft);
+}
+
+/* ---------- Page frame ---------- */
+.page { overflow-x: hidden; }
+@supports (overflow: clip) { .page { overflow-x: clip; } }
+.band { padding-block: clamp(64px, 16vw, 104px); }
+.band--sand { background: var(--sand); }
+.wrap { width: 100%; max-width: 35rem; margin-inline: auto; padding-inline: 20px; }
+.section-head { margin-bottom: clamp(32px, 9vw, 48px); text-align: center; }
+.section-head .lede { margin-top: 14px; color: var(--ink-soft); }
+.eyebrow {
+  margin-bottom: 14px; font: var(--label); letter-spacing: .3em;
+  text-transform: uppercase; color: var(--ink-soft);
+}
+h2 { font-size: clamp(2rem, 8.4vw, 2.6rem); line-height: 1.1; letter-spacing: -.01em; }
+.ornament {
+  display: flex; align-items: center; justify-content: center; gap: 14px;
+  color: var(--sand-deep);
+}
+.ornament::before, .ornament::after { content: ""; width: 64px; height: 1px; background: currentColor; }
+.ornament svg { width: 18px; height: 16px; }
+.ornament path { fill: none; stroke: currentColor; stroke-width: 1; }
+
+/* ---------- Buttons ---------- */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+  min-height: 52px; padding: 12px 20px;
+  border: 1px solid var(--ink); border-radius: 999px;
+  font: 700 .74rem/1.2 var(--font-body); letter-spacing: .16em; text-transform: uppercase;
+  text-align: center; text-decoration: none; cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition: transform .15s ease, background-color .2s ease, color .2s ease, opacity .2s ease;
+}
+.btn:active { transform: scale(.97); }
+.btn-solid { background: var(--ink); color: var(--paper); }
+.btn-line { background: transparent; color: var(--ink); }
+@media (hover: hover) {
+  .btn-line:hover { background: var(--ink); color: var(--paper); }
+  .btn-solid:hover { opacity: .86; }
+}
+.btn[aria-disabled="true"] { opacity: .4; pointer-events: none; }
+.btn-wide { width: 100%; }
+.link-btn {
+  margin-top: 14px; padding: 8px 4px; border: 0; background: none;
+  color: inherit; font: inherit; font-size: .96rem; cursor: pointer;
+  text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: .25em;
+}
+.chip {
+  display: inline-flex; align-items: center; min-height: 40px; padding: 8px 16px;
+  border: 1px solid var(--sand-deep); border-radius: 999px; background: var(--paper);
+  color: var(--ink); font: 700 .68rem/1.2 var(--font-body); letter-spacing: .14em;
+  text-transform: uppercase; text-decoration: none; cursor: pointer;
+}
+
+/* ---------- Envelope ---------- */
+.stage {
+  position: fixed; inset: 0; z-index: 50;
+  display: none; place-items: center;
+  padding: max(24px, env(safe-area-inset-top, 0px)) 20px max(24px, env(safe-area-inset-bottom, 0px));
+  background-color: var(--sand); background-image: var(--grain);
+  overflow: hidden; overscroll-behavior: contain; touch-action: manipulation;
+  transition: opacity .9s var(--ease-out);
+}
+.show-envelope .stage { display: grid; }
+.stage-inner {
+  display: grid; justify-items: center; gap: clamp(24px, 6vh, 44px);
+  width: min(100%, 400px); text-align: center;
+}
+.stage-kicker {
+  font: var(--label); letter-spacing: .34em; padding-left: .34em; text-transform: uppercase;
+  color: var(--ink-soft); transition: opacity .5s ease, transform .7s var(--ease-out);
+}
+.stage-hint {
+  font: italic 400 1.05rem/1.4 var(--font-display); color: var(--ink-soft);
+  animation: hint-in 1s 1.1s both;
+}
+@keyframes hint-in { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+.envelope {
+  position: relative; width: 100%; aspect-ratio: 3 / 2; perspective: 1400px; cursor: pointer;
+  transition: transform 1s var(--ease-out);
+}
+.env-layer { position: absolute; inset: 0; display: block; width: 100%; height: 100%; }
+.env-back { z-index: 1; filter: drop-shadow(0 26px 26px var(--env-shadow)); }
+.env-inside { fill: var(--env-inside); }
+.env-letter {
+  position: absolute; z-index: 2; left: 5%; right: 5%; top: 5%; height: 86%;
+  display: grid; align-content: center; justify-items: center; gap: 8px; padding: 6%;
+  border-radius: 3px; background: var(--paper);
+  transition: transform 1s var(--ease-out), opacity .7s ease;
+}
+.env-letter-names { font: 400 clamp(1.3rem, 6.4vw, 1.8rem)/1.1 var(--font-display); }
+.env-letter-names em { color: var(--ink-soft); }
+.env-letter-date { font: var(--label); letter-spacing: .3em; padding-left: .3em; color: var(--ink-soft); }
+.env-front { z-index: 3; pointer-events: none; }
+.env-side { fill: var(--env-side); }
+.env-bottom { fill: var(--env-front); }
+.env-edge { fill: none; stroke: var(--env-edge); stroke-width: 1; vector-effect: non-scaling-stroke; }
+.env-flap { z-index: 4; transform-origin: 50% 0; transition: transform .8s cubic-bezier(.45, .05, .25, 1); }
+.env-flap svg { display: block; width: 100%; height: 100%; overflow: visible; filter: drop-shadow(0 3px 3px var(--env-shadow)); }
+.flap-a { stop-color: var(--env-flap); }
+.flap-b { stop-color: var(--env-flap-tip); }
+.env-flap-shape { fill: url(#flap-shade); stroke: var(--env-edge); stroke-width: 1; vector-effect: non-scaling-stroke; }
+.seal {
+  position: absolute; z-index: 5; left: 50%; top: 58%; width: 28%; aspect-ratio: 1;
+  padding: 0; border: 0; border-radius: 50%; background: none; cursor: pointer;
+  transform: translate(-50%, -50%);
+  -webkit-tap-highlight-color: transparent;
+  transition: transform .45s var(--ease-out), opacity .4s ease;
+}
+.seal svg {
+  display: block; width: 100%; height: 100%; overflow: visible;
+  filter: drop-shadow(0 6px 7px rgba(21, 19, 17, .35));
+  animation: breathe 3.2s ease-in-out infinite;
+}
+@keyframes breathe { 50% { transform: scale(1.035); } }
+.seal::after {
+  content: ""; position: absolute; inset: -12%; border: 1px solid var(--ink); border-radius: 50%;
+  opacity: 0; animation: ping 3.2s 1.8s ease-out infinite;
+}
+@keyframes ping { 0% { opacity: .35; transform: scale(.84); } 70%, 100% { opacity: 0; transform: scale(1.22); } }
+.seal:focus-visible { outline: 2px solid var(--ink); outline-offset: 8px; }
+.wax-hi { stop-color: var(--wax-hi); }
+.wax-mid { stop-color: var(--wax-mid); }
+.wax-lo { stop-color: var(--wax-lo); }
+.wax-sheen { fill: none; stroke: var(--wax-sheen); stroke-width: 1; }
+.wax-rim { fill: none; stroke: var(--wax-lo); stroke-width: 3.5; opacity: .75; }
+.wax-ring { fill: none; stroke: var(--gold); stroke-width: .8; opacity: .55; }
+.wax-mono { font-family: var(--font-display); font-size: 27px; fill: var(--gold); }
+.wax-mono--shadow { fill: var(--wax-lo); }
+.wax-amp { font-style: italic; font-size: 19px; }
+
+.stage.is-cracking .seal { transform: translate(-50%, -50%) scale(1.16) rotate(-8deg); opacity: 0; pointer-events: none; }
+.stage.is-cracking .seal svg, .stage.is-cracking .seal::after { animation: none; }
+.stage.is-cracking .stage-hint { animation: none; opacity: 0; }
+.stage.is-flap-open .env-flap { transform: rotateX(180deg); }
+.stage.is-flap-behind .env-flap { z-index: 1; }
+.stage.is-letter-out .env-letter { transform: translateY(-56%); }
+.stage.is-leaving { opacity: 0; pointer-events: none; }
+.stage.is-leaving .envelope { transform: translateY(22%) scale(.96); }
+.stage.is-leaving .env-letter { transform: translateY(-84%); }
+.stage.is-leaving .stage-kicker { opacity: 0; transform: translateY(-14px); }
+
+/* ---------- Hero ---------- */
+.hero { position: relative; padding: clamp(76px, 20vw, 128px) 20px 0; text-align: center; overflow: hidden; }
+.names {
+  display: grid; justify-items: center;
+  font-size: clamp(3.4rem, 17vw, 6rem); line-height: .98; letter-spacing: -.015em;
+}
+.names .amp { font-style: italic; font-size: .5em; line-height: 1.25; color: var(--ink-soft); }
+.tagline {
+  margin-top: 30px; font: 700 .78rem/1.4 var(--font-body);
+  letter-spacing: .36em; padding-left: .36em; text-transform: uppercase;
+}
+.hero-date {
+  margin-top: 14px; font: 400 clamp(1.5rem, 6.4vw, 1.9rem)/1.2 var(--font-display);
+  letter-spacing: .2em; padding-left: .2em; font-variant-numeric: lining-nums tabular-nums;
+}
+.hero-art-wrap { width: min(100%, 580px); margin: 34px auto 0; }
+.hero-art {
+  display: block; width: 100%; height: auto; color: var(--sand-deep); opacity: .85;
+  -webkit-mask-image: linear-gradient(#000 70%, transparent); mask-image: linear-gradient(#000 70%, transparent);
+  will-change: transform;
+}
+.hero-art path, .hero-art circle {
+  stroke: currentColor; stroke-width: 1; stroke-linecap: round; stroke-linejoin: round;
+  vector-effect: non-scaling-stroke;
+}
+.hero-art .line path, .hero-art .line circle { fill: none; }
+.hero-art .mass path { fill: var(--paper); }
+.js [data-rise] { opacity: 0; }
+.js.is-open [data-rise] { animation: rise 1.1s var(--ease-out) both; animation-delay: calc(var(--d, 0) * 1ms); }
+@keyframes rise { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: none; } }
+.js.rise-done [data-rise] { opacity: 1; animation: none; }
+
+/* ---------- Countdown ---------- */
+.countdown { padding: 30px 20px clamp(56px, 14vw, 88px); text-align: center; }
+.cd {
+  display: grid; grid-template-columns: repeat(4, minmax(0, 1fr));
+  max-width: 26rem; margin-inline: auto; border-block: 1px solid var(--hairline);
+}
+.cd-unit { display: grid; gap: 8px; padding: 18px 2px 16px; }
+.cd-unit + .cd-unit { border-left: 1px solid var(--hairline); }
+.cd-num {
+  font: 400 clamp(1.9rem, 9vw, 2.6rem)/1 var(--font-display);
+  font-variant-numeric: lining-nums tabular-nums;
+}
+.cd-label {
+  font: 700 .62rem/1 var(--font-body); letter-spacing: .22em; padding-left: .22em;
+  text-transform: uppercase; color: var(--ink-soft);
+}
+.cd-caption { margin-top: 16px; color: var(--ink-soft); font-size: .98rem; text-wrap: balance; }
+.cd-done { font: italic 400 1.6rem/1.3 var(--font-display); color: var(--ink); }
+
+/* ---------- Our Wedding ---------- */
+.facts { margin: 0; border-top: 1px solid var(--hairline); }
+.fact {
+  display: grid; grid-template-columns: 5.6rem minmax(0, 1fr); gap: 16px; align-items: baseline;
+  padding-block: 18px; border-bottom: 1px solid var(--hairline);
+}
+.fact dt { font: var(--label); letter-spacing: .22em; text-transform: uppercase; color: var(--ink-soft); }
+.fact dd { margin: 0; font: 400 1.32rem/1.3 var(--font-display); font-variant-numeric: lining-nums; }
+.fact small { display: block; margin-top: 5px; font: 400 .95rem/1.5 var(--font-body); color: var(--ink-soft); }
+.actions { display: grid; grid-template-columns: repeat(auto-fit, minmax(11.5rem, 1fr)); gap: 10px; margin-top: 28px; }
+
+/* ---------- What to expect ---------- */
+.expect-item { padding-block: 26px; border-top: 1px solid var(--sand-deep); }
+.expect-item:first-child { padding-top: 0; border-top: 0; }
+.expect-item:last-child { padding-bottom: 0; }
+.expect-item h3 { margin-bottom: 8px; font-size: 1.45rem; font-style: italic; line-height: 1.25; }
+.swatches {
+  display: flex; flex-wrap: wrap; gap: 10px 20px; margin: 16px 0 0; padding: 0; list-style: none;
+  font: var(--label); letter-spacing: .18em; text-transform: uppercase; color: var(--ink-soft);
+}
+.swatches li { display: inline-flex; align-items: center; gap: 10px; }
+.swatch { width: 28px; height: 28px; border: 1px solid var(--sand-deep); border-radius: 50%; }
+.swatch--white { background: var(--paper); }
+.swatch--beige { background: var(--beige); }
+.swatch--black { background: var(--ink); border-color: var(--ink); }
+.contact-actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+
+/* ---------- Schedule ---------- */
+.timeline { margin: 0; padding: 0; list-style: none; }
+.day { position: relative; display: grid; grid-template-columns: 58px minmax(0, 1fr); column-gap: 18px; padding-bottom: 34px; }
+.day:last-child { padding-bottom: 0; }
+.day:not(:last-child)::before {
+  content: ""; position: absolute; left: 29px; top: 66px; bottom: 8px; width: 1px; background: var(--sand-deep);
+}
+.day-mark {
+  display: grid; place-content: center; width: 58px; height: 58px;
+  border: 1px solid var(--sand-deep); border-radius: 50%; background: var(--paper); text-align: center;
+}
+.dow { font: 700 .58rem/1 var(--font-body); letter-spacing: .2em; padding-left: .2em; text-transform: uppercase; color: var(--ink-soft); }
+.dnum { font: 400 1.4rem/1.1 var(--font-display); font-variant-numeric: lining-nums; }
+.day.is-wedding .day-mark { border-color: var(--ink); background: var(--ink); color: var(--on-ink); }
+.day.is-wedding .dow { color: var(--gold); }
+.day h3 { margin: 4px 0 14px; font-size: 1.32rem; line-height: 1.25; }
+.events { display: grid; gap: 14px; margin: 0; padding: 0; list-style: none; }
+.events li { display: grid; gap: 2px; }
+.ev-time { font: var(--label); letter-spacing: .18em; text-transform: uppercase; color: var(--ink-soft); }
+
+/* ---------- RSVP ---------- */
+.arch-wrap { container-type: inline-size; }
+.arch {
+  position: relative; text-align: center; background: var(--sand);
+  padding: 96px 24px 40px;
+  padding: clamp(88px, 26cqw, 132px) clamp(20px, 7cqw, 44px) clamp(36px, 9cqw, 52px);
+  border-radius: 999px 999px 26px 26px;
+  border-radius: 50cqw 50cqw 26px 26px;
+}
+.arch::before {
+  content: ""; position: absolute; inset: 9px; pointer-events: none;
+  border: 1px solid var(--sand-deep);
+  border-radius: 999px 999px 18px 18px;
+  border-radius: calc(50cqw - 9px) calc(50cqw - 9px) 18px 18px;
+}
+.arch > * { position: relative; }
+.rsvp-by { margin-top: 14px; color: var(--ink-soft); }
+#rsvp-title { scroll-margin-top: 28px; }
+.rsvp-saved { margin-top: 18px; font-size: .98rem; }
+.btn-rsvp {
+  display: flex; align-items: center; justify-content: center;
+  width: min(100%, 300px); min-height: 66px; margin: 30px auto 0;
+  padding: 0 28px 0 calc(28px + .4em); border: 0; border-radius: 999px;
+  background: var(--ink); color: var(--paper);
+  font: 700 1rem/1 var(--font-body); letter-spacing: .4em; text-transform: uppercase;
+  box-shadow: 0 16px 30px -16px var(--shadow); cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition: transform .15s ease, box-shadow .2s ease, opacity .2s ease;
+}
+.btn-rsvp:active { transform: scale(.97); box-shadow: 0 8px 18px -12px var(--shadow); }
+.btn-rsvp:disabled { opacity: .6; cursor: progress; }
+.btn-rsvp--send { margin-top: 8px; letter-spacing: .24em; padding-left: calc(28px + .24em); }
+.rsvp-form { display: grid; gap: 22px; margin-top: 30px; text-align: left; }
+.is-entering { animation: rise .7s var(--ease-out) both; }
+.field { display: grid; gap: 8px; min-width: 0; margin: 0; padding: 0; border: 0; }
+.field-label { font: var(--label); letter-spacing: .18em; text-transform: uppercase; color: var(--ink-soft); }
+fieldset.field { display: block; }
+fieldset.field > legend { float: left; width: 100%; margin-bottom: 8px; padding: 0; }
+fieldset.field > legend + * { clear: both; }
+.field-label small {
+  display: block; margin-top: 2px; font: 400 .9rem/1.4 var(--font-body);
+  letter-spacing: 0; text-transform: none;
+}
+.input {
+  width: 100%; min-height: 54px; padding: 14px 16px;
+  border: 1px solid var(--hairline); border-radius: 14px; background: var(--paper); color: var(--ink);
+  font: 400 1.0625rem/1.4 var(--font-body); -webkit-appearance: none; appearance: none;
+  transition: border-color .2s ease, box-shadow .2s ease;
+}
+.input::placeholder { color: var(--placeholder); }
+.input:focus { outline: none; border-color: var(--ink); box-shadow: 0 0 0 3px var(--focus); }
+.input[aria-invalid="true"] { border-color: var(--alert); }
+textarea.input { min-height: 128px; resize: vertical; }
+.field-error { color: var(--alert); font-size: .92rem; line-height: 1.4; }
+.segmented { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+.segmented label { position: relative; display: block; }
+.segmented input { position: absolute; inset: 0; width: 100%; height: 100%; margin: 0; opacity: 0; cursor: pointer; }
+.segmented span {
+  display: flex; align-items: center; justify-content: center; min-height: 54px; padding: 10px 12px;
+  border: 1px solid var(--sand-deep); border-radius: 999px; background: var(--paper);
+  font-size: .98rem; line-height: 1.25; text-align: center;
+  transition: background-color .2s ease, color .2s ease, border-color .2s ease;
+}
+.segmented input:checked + span { border-color: var(--ink); background: var(--ink); color: var(--paper); }
+.segmented input:focus-visible + span { outline: 2px solid var(--ink); outline-offset: 3px; }
+.stepper {
+  display: grid; grid-template-columns: 54px minmax(0, 1fr) 54px; align-items: center; max-width: 220px;
+  border: 1px solid var(--hairline); border-radius: 999px; background: var(--paper);
+}
+.stepper:focus-within { border-color: var(--ink); box-shadow: 0 0 0 3px var(--focus); }
+.stepper button {
+  height: 54px; border: 0; border-radius: 999px; background: none; color: var(--ink);
+  font: 400 1.5rem/1 var(--font-body); cursor: pointer; -webkit-tap-highlight-color: transparent;
+}
+.stepper input {
+  width: 100%; min-width: 0; height: 52px; border: 0; background: none; color: var(--ink); text-align: center;
+  font: 400 1.35rem/1 var(--font-display); -moz-appearance: textfield; appearance: textfield;
+}
+.stepper input:focus { outline: none; }
+.stepper input::-webkit-outer-spin-button, .stepper input::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
+.more { display: grid; gap: 22px; min-width: 0; margin: 0; padding: 0; border: 0; }
+.result { margin-top: 28px; }
+.result-title { font: 400 1.75rem/1.2 var(--font-display); }
+.result-text { margin-top: 10px; color: var(--ink-soft); }
+.send-actions { display: grid; gap: 10px; margin-top: 22px; }
+.send-preview {
+  margin: 18px 0 0; padding: 14px 16px; max-height: 15rem; overflow: auto;
+  border: 1px solid var(--hairline); border-radius: 14px; background: var(--paper); color: var(--ink-soft);
+  font: 400 .9rem/1.55 var(--font-body); text-align: left; white-space: pre-wrap; overflow-wrap: anywhere;
+}
+
+/* ---------- Calendar & location ---------- */
+.tiles { display: grid; gap: 16px; }
+.tile { padding: 28px 22px 24px; border-radius: 24px; background: var(--paper); text-align: center; }
+.tile-label { font: var(--label); letter-spacing: .26em; text-transform: uppercase; color: var(--ink-soft); }
+.tile h3 { margin-top: 8px; font-size: 1.6rem; line-height: 1.2; }
+.tile-sub { margin-top: 6px; color: var(--ink-soft); }
+.tile-actions { display: grid; gap: 10px; margin-top: 22px; }
+
+/* ---------- FAQ ---------- */
+.faq { border-top: 1px solid var(--hairline); }
+.faq details { border-bottom: 1px solid var(--hairline); }
+.faq summary {
+  display: flex; align-items: center; justify-content: space-between; gap: 18px;
+  padding: 20px 2px; cursor: pointer; list-style: none;
+  font: 400 1.18rem/1.35 var(--font-display);
+}
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after {
+  content: ""; flex: none; width: 13px; height: 13px;
+  background:
+    linear-gradient(var(--ink), var(--ink)) center / 100% 1px no-repeat,
+    linear-gradient(var(--ink), var(--ink)) center / 1px 100% no-repeat;
+  transition: transform .3s var(--ease-out);
+}
+.faq details[open] > summary::after { transform: rotate(45deg); }
+.faq-a { padding: 0 2px 22px; color: var(--ink-soft); }
+
+/* ---------- Photos & guestbook ---------- */
+.center { text-align: center; }
+.photos .lede { margin-top: 14px; color: var(--ink-soft); }
+.photos .btn { margin-top: 26px; }
+.photos .tbd-line { margin-top: 12px; font-size: .95rem; }
+.note-form { display: grid; gap: 20px; }
+
+/* ---------- Closing ---------- */
+.closing {
+  padding: 76px 20px calc(60px + env(safe-area-inset-bottom, 0px));
+  background: var(--ink); color: var(--on-ink); text-align: center;
+}
+.closing-seal { display: block; width: 84px; height: 84px; margin: 0 auto 22px; overflow: visible; }
+.stamp-ring { fill: none; stroke: var(--gold); stroke-width: 1; vector-effect: non-scaling-stroke; opacity: .75; }
+.stamp-ring--inner { opacity: .4; }
+.closing-names { font: 400 2.1rem/1.1 var(--font-display); }
+.closing-names em { font-size: .7em; color: var(--gold); }
+.closing-meta { margin-top: 12px; font: var(--label); letter-spacing: .28em; text-transform: uppercase; color: var(--gold); }
+.closing .link-btn { margin-top: 26px; color: var(--on-ink); }
+
+/* ---------- Scroll reveal & toast ---------- */
+.has-io .reveal { opacity: 0; transform: translateY(26px); transition: opacity .9s var(--ease-out), transform .9s var(--ease-out); }
+.has-io .reveal.is-in { opacity: 1; transform: none; }
+.toast {
+  position: fixed; left: 50%; bottom: calc(22px + env(safe-area-inset-bottom, 0px)); z-index: 60;
+  max-width: calc(100vw - 40px); padding: 12px 20px; border-radius: 999px;
+  background: var(--ink); color: var(--on-ink); text-align: center;
+  font: 700 .74rem/1.3 var(--font-body); letter-spacing: .12em; text-transform: uppercase;
+  opacity: 0; transform: translate(-50%, 16px); pointer-events: none;
+  transition: opacity .25s ease, transform .25s var(--ease-out);
+}
+.toast.is-on { opacity: 1; transform: translate(-50%, 0); }
+
+/* Small phones such as the iPhone SE */
+@media (max-width: 359px) {
+  .cd-label { letter-spacing: .12em; padding-left: .12em; }
+  .fact { grid-template-columns: minmax(0, 1fr); gap: 6px; }
+  .swatches { gap: 10px 14px; letter-spacing: .14em; }
+  .swatch { width: 24px; height: 24px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .01ms !important; animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important; scroll-behavior: auto !important;
+  }
+  .stage { transition-duration: .35s !important; }
+  .js [data-rise] { opacity: 1; animation: none !important; }
+}
+</style>
+<script>
+  (function () {
+    var root = document.documentElement;
+    var seen = false;
+    try { seen = localStorage.getItem("aa-opened") === "1"; } catch (e) {}
+    root.classList.add("js");
+    if (!seen && !(location.hash && location.hash.length > 1)) root.classList.add("show-envelope");
+    // If the main script never starts, show the invitation as plain content.
+    setTimeout(function () { if (!window.__inviteReady) root.classList.remove("js", "show-envelope"); }, 6000);
+  })();
+</script>
+<script type="application/json" id="wedding-config">
+{
+  "_note": "Replace every [bracketed] value. Write times like 4:30 PM; ceremony.endTime is when the Mural Room booking ends. rsvp.endpoint: leave empty and guests send their RSVP by WhatsApp, text or email; or set a Formspree form URL, or the word netlify when hosting on Netlify. Set photoAlbumUrl to an empty string to hide the photo section.",
+  "couple": { "first": "Ana", "second": "Abraham" },
+  "date": "2026-10-26",
+  "utcOffset": "-07:00",
+  "ceremony": {
+    "time": "2:30 PM",
+    "endTime": "4:30 PM",
+    "address": "1100 Anacapa St, Santa Barbara, CA 93101"
+  },
+  "welcomeDinner": { "time": "[Time]" },
+  "dinner": { "venue": "[Dinner Venue]", "time": "[Time]" },
+  "hotel": { "name": "[Hotel Name]" },
+  "contact": { "name": "[Name]", "phone": "[Phone]", "email": "[Email]" },
+  "rsvp": { "deadline": "[Date]", "endpoint": "" },
+  "photoAlbumUrl": "[Shared album link]",
+  "siteUrl": "https://abraham-ana.com/"
+}
+</script>
+</head>
+<body>
+<div class="stage" id="stage">
+  <div class="stage-inner">
+    <p class="stage-kicker">You’re invited</p>
+    <div class="envelope" id="envelope">
+      <svg class="env-layer env-back" viewBox="0 0 300 200" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+        <rect class="env-inside" width="300" height="200" rx="5"/>
+      </svg>
+      <div class="env-letter" aria-hidden="true">
+        <p class="env-letter-names">Ana <em>&amp;</em> Abraham</p>
+        <p class="env-letter-date">10.26.2026</p>
+      </div>
+      <svg class="env-layer env-front" viewBox="0 0 300 200" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+        <defs><clipPath id="env-clip"><rect width="300" height="200" rx="5"/></clipPath></defs>
+        <g clip-path="url(#env-clip)">
+          <path class="env-side" d="M0 0L150 108L0 200Z"/>
+          <path class="env-side" d="M300 0L150 108L300 200Z"/>
+          <path class="env-bottom" d="M0 200L150 90L300 200Z"/>
+          <path class="env-edge" d="M0 0L150 108L300 0M0 200L150 90L300 200"/>
+        </g>
+      </svg>
+      <div class="env-layer env-flap" aria-hidden="true">
+        <svg viewBox="0 0 300 200" preserveAspectRatio="none" focusable="false">
+          <defs>
+            <linearGradient id="flap-shade" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" class="flap-a"/><stop offset=".7" class="flap-b"/>
+            </linearGradient>
+          </defs>
+          <path class="env-flap-shape" d="M5 0H295Q300 0 296.5 3.4L156 114Q150 119 144 114L3.5 3.4Q0 0 5 0Z"/>
+        </svg>
+      </div>
+      <button class="seal" id="seal" type="button" aria-label="Open the invitation">
+        <svg viewBox="0 0 120 120" aria-hidden="true" focusable="false">
+          <defs>
+            <radialGradient id="wax-a" cx="36%" cy="30%" r="78%">
+              <stop offset="0" class="wax-hi"/><stop offset=".48" class="wax-mid"/><stop offset="1" class="wax-lo"/>
+            </radialGradient>
+          </defs>
+          <path fill="url(#wax-a)" d="M112.6 60C113 63 113 66.3 112.3 69.2C111.6 72.2 109.8 74.9 108.6 77.7C107.4 80.5 106.6 83.4 105.3 86.1C103.9 88.8 102.4 91.7 100.4 93.9C98.4 96.1 95.6 97.8 93 99.4C90.4 100.9 87.6 102.1 84.9 103.2C82.2 104.3 79.4 105 76.7 105.9C74 106.7 71.3 107.8 68.5 108.2C65.7 108.7 62.8 108.9 60 108.7C57.2 108.4 54.5 107.3 51.8 106.7C49 106.1 46.5 105.4 43.6 105C40.7 104.6 37.6 104.8 34.5 104.2C31.3 103.7 27.8 103.2 24.9 101.8C22 100.4 19.1 98.4 17.3 95.8C15.5 93.3 14.9 89.6 14 86.6C13.1 83.5 12.4 80.5 11.9 77.5C11.4 74.5 10.9 71.6 11 68.6C11.2 65.7 12.1 62.8 12.5 60C13 57.2 13.5 54.6 13.8 51.9C14 49.1 13.6 46.1 14 43.3C14.4 40.4 15 37.4 16.3 34.7C17.5 32.1 19.7 30 21.4 27.6C23.1 25.2 24.6 22.4 26.6 20.2C28.6 18 30.9 15.6 33.5 14.1C36.1 12.7 39.4 12.1 42.3 11.3C45.2 10.6 48.2 10.2 51.1 9.7C54.1 9.3 57 8.9 60 8.7C63 8.4 66.2 7.8 69.1 8.2C72.1 8.5 75.2 9.4 77.9 10.8C80.6 12.1 83.1 14.1 85.3 16.1C87.5 18.2 89.4 20.6 91.2 22.8C93 25 94.6 27.3 96.3 29.5C98.1 31.7 100.2 33.6 101.8 35.9C103.4 38.2 104.7 40.7 106 43.3C107.3 45.8 108.4 48.5 109.5 51.3C110.6 54.1 112.1 57 112.6 60Z"/>
+          <circle class="wax-sheen" cx="60" cy="60" r="42"/>
+          <circle class="wax-rim" cx="60" cy="60" r="40"/>
+          <circle class="wax-ring" cx="60" cy="60" r="34"/>
+          <text class="wax-mono wax-mono--shadow" x="60" y="69.9" text-anchor="middle">A<tspan class="wax-amp" dx="1" dy="-1.5">&amp;</tspan><tspan dx="1" dy="1.5">A</tspan></text>
+          <text class="wax-mono" x="60" y="69" text-anchor="middle">A<tspan class="wax-amp" dx="1" dy="-1.5">&amp;</tspan><tspan dx="1" dy="1.5">A</tspan></text>
+        </svg>
+      </button>
+    </div>
+    <p class="stage-hint">Tap the seal to open</p>
+  </div>
+</div>
+
+<main class="page" id="main">
+  <header class="hero" id="top">
+    <h1 class="names" id="title" tabindex="-1">
+      <span data-rise style="--d:0">Ana</span>
+      <span class="amp" data-rise style="--d:140">&amp;</span>
+      <span data-rise style="--d:280">Abraham</span>
+    </h1>
+    <p class="tagline" data-rise style="--d:480">Are getting married.</p>
+    <p class="hero-date" data-rise style="--d:620"><time datetime="2026-10-26">10.26.2026</time></p>
+    <div class="hero-art-wrap" data-rise style="--d:780">
+      <svg class="hero-art" viewBox="0 0 400 230" aria-hidden="true" focusable="false">
+        <g class="line">
+          <path d="M0 108C60 92 110 96 150 86S230 70 280 84S360 92 400 80"/>
+          <path d="M0 182C50 170 100 172 150 178S220 162 260 172S340 178 400 170"/>
+        </g>
+        <g class="mass">
+          <path d="M40 220V130H140V220Z"/>
+          <path d="M34 130L54 112H126L146 130Z"/>
+          <path d="M140 220V104H240V220H214V156A24 24 0 0 0 166 156V220Z"/>
+          <path d="M134 104L152 90H228L246 104Z"/>
+          <path d="M246 220V78H294V220Z"/>
+          <path d="M248 78V56H292V78Z"/>
+          <path d="M244 56L270 38L296 56Z"/>
+          <path d="M294 220V140H370V220Z"/>
+          <path d="M290 140L306 126H354L374 140Z"/>
+        </g>
+        <g class="line">
+          <path d="M160 156A30 30 0 0 1 220 156M140 114H240"/>
+          <path d="M58 194V169A9 9 0 0 1 76 169V194ZM104 194V169A9 9 0 0 1 122 169V194ZM54 198H80M100 198H126"/>
+          <path d="M242 78H298M244 56H296"/>
+          <path d="M254 78V66A4 4 0 0 1 262 66V78M266 78V66A4 4 0 0 1 274 66V78M278 78V66A4 4 0 0 1 286 66V78"/>
+          <circle cx="270" cy="102" r="12"/>
+          <path d="M270 102V94M270 102L276 105M265 162V146A5 5 0 0 1 275 146V162ZM270 38V29"/>
+          <circle cx="270" cy="27" r="2"/>
+          <path d="M308 196V174A8 8 0 0 1 324 174V196ZM340 196V174A8 8 0 0 1 356 174V196Z"/>
+          <path d="M0 220H400"/>
+          <path d="M16 220C18 186 22 152 26 120M26 120C36 112 48 112 58 121M26 120C34 106 44 100 55 99M26 120C22 106 15 100 6 99M26 120C17 113 8 115 1 122M26 120C28 106 30 97 31 88"/>
+        </g>
+      </svg>
+    </div>
+  </header>
+
+  <section class="countdown" aria-labelledby="cd-title">
+    <h2 class="visually-hidden" id="cd-title">Countdown to the wedding</h2>
+    <div class="cd" id="cd-grid" role="timer">
+      <div class="cd-unit"><span class="cd-num" id="cd-days">00</span><span class="cd-label">Days</span></div>
+      <div class="cd-unit"><span class="cd-num" id="cd-hours">00</span><span class="cd-label">Hours</span></div>
+      <div class="cd-unit"><span class="cd-num" id="cd-mins">00</span><span class="cd-label">Minutes</span></div>
+      <div class="cd-unit"><span class="cd-num" id="cd-secs">00</span><span class="cd-label">Seconds</span></div>
+    </div>
+    <p class="cd-caption" id="cd-caption">until <span data-field="ceremony.time">2:30 PM</span> on Monday, October 26 · Pacific time</p>
+  </section>
+
+  <div class="ornament" aria-hidden="true"><svg viewBox="0 0 18 16"><path d="M2 16V9a7 7 0 0 1 14 0v7"/></svg></div>
+
+  <section class="band" id="wedding" aria-labelledby="wedding-title">
+    <div class="wrap">
+      <header class="section-head reveal">
+        <p class="eyebrow">Our Wedding</p>
+        <h2 id="wedding-title">Monday, October 26, 2026</h2>
+      </header>
+      <dl class="facts reveal">
+        <div class="fact">
+          <dt>Time</dt>
+          <dd><span data-field="ceremony.time" data-until="ceremony.endTime">2:30–4:30 PM</span><small id="arrive-note">Please arrive 20–30 minutes early (2:00–2:10 PM) for security and seating.</small></dd>
+        </div>
+        <div class="fact">
+          <dt>Place</dt>
+          <dd>Santa Barbara Courthouse<small>Mural Room, second floor</small></dd>
+        </div>
+        <div class="fact">
+          <dt>Address</dt>
+          <dd>1100 Anacapa St<small>Santa Barbara, CA 93101</small></dd>
+        </div>
+      </dl>
+      <div class="actions reveal">
+        <a class="btn btn-solid" id="open-maps" href="https://www.google.com/maps/search/?api=1&amp;query=Santa%20Barbara%20County%20Courthouse%2C%201100%20Anacapa%20St%2C%20Santa%20Barbara%2C%20CA%2093101" target="_blank" rel="noopener">Open in Maps</a>
+        <a class="btn btn-line" id="quick-cal" href="#plan">Add to Calendar</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="band band--sand" id="expect" aria-labelledby="expect-title">
+    <div class="wrap">
+      <header class="section-head reveal">
+        <p class="eyebrow">What to Expect</p>
+        <h2 id="expect-title">You’re our guests, start to finish</h2>
+      </header>
+      <div class="expect">
+        <article class="expect-item reveal">
+          <h3>Hotel &amp; Meals</h3>
+          <p>We are hosting everyone for Sunday night (Oct 25) and Monday night (Oct 26) at <span class="tbd" data-field="hotel.name">[Hotel Name]</span>. Check-in Sunday afternoon, check-out Tuesday morning. All hotel and food costs are covered.</p>
+        </article>
+        <article class="expect-item reveal">
+          <h3>Ceremony</h3>
+          <p>Monday, Oct 26 at the Santa Barbara Courthouse — Mural Room. Please arrive 20–30 minutes early for security and seating.</p>
+        </article>
+        <article class="expect-item reveal">
+          <h3>Dinner</h3>
+          <p>After the ceremony and photos, join us for dinner at <span class="tbd" data-field="dinner.venue">[Dinner Venue]</span>.</p>
+        </article>
+        <article class="expect-item reveal">
+          <h3>Attire</h3>
+          <p>We kindly ask guests to wear white, beige, or black.</p>
+          <ul class="swatches" aria-label="Colors to wear">
+            <li><span class="swatch swatch--white"></span>White</li>
+            <li><span class="swatch swatch--beige"></span>Beige</li>
+            <li><span class="swatch swatch--black"></span>Black</li>
+          </ul>
+        </article>
+        <article class="expect-item reveal">
+          <h3>Questions</h3>
+          <p id="contact-line">Ask <span class="tbd">[Name]</span> at <span class="tbd">[Phone]</span> or <span class="tbd">[Email]</span>.</p>
+          <div class="contact-actions" id="contact-actions"></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" id="schedule" aria-labelledby="schedule-title">
+    <div class="wrap">
+      <header class="section-head reveal">
+        <p class="eyebrow">Schedule at a Glance</p>
+        <h2 id="schedule-title">Three days in Santa Barbara</h2>
+      </header>
+      <ol class="timeline">
+        <li class="day reveal">
+          <div class="day-mark" aria-hidden="true"><span class="dow">Sun</span><span class="dnum">25</span></div>
+          <div>
+            <h3>Sunday, October 25</h3>
+            <ul class="events">
+              <li><span class="ev-time">Afternoon</span><span>Hotel check-in at <span class="tbd" data-field="hotel.name">[Hotel Name]</span></span></li>
+              <li data-optional="welcomeDinner.time"><span class="ev-time tbd" data-field="welcomeDinner.time">[Time]</span><span>Welcome dinner</span></li>
+            </ul>
+          </div>
+        </li>
+        <li class="day is-wedding reveal">
+          <div class="day-mark" aria-hidden="true"><span class="dow">Mon</span><span class="dnum">26</span></div>
+          <div>
+            <h3>Monday, October 26</h3>
+            <ul class="events">
+              <li><span class="ev-time" data-field="ceremony.time" data-until="ceremony.endTime">2:30–4:30 PM</span><span>Wedding at the Mural Room, Santa Barbara Courthouse</span></li>
+              <li><span class="ev-time tbd" data-field="dinner.time">[Time]</span><span>Dinner at <span class="tbd" data-field="dinner.venue">[Dinner Venue]</span></span></li>
+            </ul>
+          </div>
+        </li>
+        <li class="day reveal">
+          <div class="day-mark" aria-hidden="true"><span class="dow">Tue</span><span class="dnum">27</span></div>
+          <div>
+            <h3>Tuesday, October 27</h3>
+            <ul class="events">
+              <li><span class="ev-time">Morning</span><span>Hotel check-out</span></li>
+            </ul>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <div class="ornament" aria-hidden="true"><svg viewBox="0 0 18 16"><path d="M2 16V9a7 7 0 0 1 14 0v7"/></svg></div>
+
+  <section class="band" id="rsvp" aria-labelledby="rsvp-title">
+    <div class="wrap arch-wrap">
+      <div class="arch reveal">
+        <p class="eyebrow">RSVP</p>
+        <h2 id="rsvp-title">Will you join us?</h2>
+        <p class="rsvp-by">Kindly reply by <span class="tbd" data-field="rsvp.deadline">[Date]</span>.</p>
+        <p class="rsvp-saved" id="rsvp-saved" hidden></p>
+        <button class="btn-rsvp" id="rsvp-open" type="button" aria-expanded="false" aria-controls="rsvp-form">RSVP</button>
+
+        <form class="rsvp-form" id="rsvp-form" name="rsvp" method="post" data-netlify="true" netlify-honeypot="bot-field" novalidate hidden>
+          <input type="hidden" name="form-name" value="rsvp">
+          <p hidden><label>Leave this empty <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+          <div class="field">
+            <label class="field-label" for="rsvp-name">Full name</label>
+            <input class="input" id="rsvp-name" name="name" type="text" autocomplete="name" maxlength="80" required>
+            <p class="field-error" hidden></p>
+          </div>
+          <div class="field">
+            <label class="field-label" for="rsvp-contact">Email or phone</label>
+            <input class="input" id="rsvp-contact" name="contact" type="text" autocomplete="email" inputmode="email" maxlength="120" required>
+            <p class="field-error" hidden></p>
+          </div>
+          <fieldset class="field">
+            <legend class="field-label">Will you attend?</legend>
+            <div class="segmented">
+              <label><input type="radio" name="attending" value="yes" id="rsvp-yes"><span>Joyfully accept</span></label>
+              <label><input type="radio" name="attending" value="no" id="rsvp-no"><span>Regretfully decline</span></label>
+            </div>
+            <p class="field-error" id="attending-error" hidden></p>
+          </fieldset>
+          <fieldset class="more" id="rsvp-more" disabled hidden>
+            <div class="field">
+              <label class="field-label" for="rsvp-guests">Number of guests<small>Including you</small></label>
+              <div class="stepper">
+                <button type="button" data-step="-1" aria-label="One fewer guest">−</button>
+                <input id="rsvp-guests" name="guests" type="number" inputmode="numeric" min="1" max="10" value="1">
+                <button type="button" data-step="1" aria-label="One more guest">+</button>
+              </div>
+              <p class="field-error" hidden></p>
+            </div>
+            <fieldset class="field">
+              <legend class="field-label">Do you need a hotel room?<small>Sunday and Monday nights, on us</small></legend>
+              <div class="segmented">
+                <label><input type="radio" name="hotel" value="yes" id="rsvp-hotel-yes"><span>Yes, please</span></label>
+                <label><input type="radio" name="hotel" value="no" id="rsvp-hotel-no"><span>No, thank you</span></label>
+              </div>
+            </fieldset>
+            <div class="field">
+              <label class="field-label" for="rsvp-diet">Dietary restrictions</label>
+              <input class="input" id="rsvp-diet" name="dietary" type="text" maxlength="200" placeholder="Vegetarian, allergies, or none">
+            </div>
+            <div class="field">
+              <label class="field-label" for="rsvp-access">Accessibility needs</label>
+              <input class="input" id="rsvp-access" name="accessibility" type="text" maxlength="200" placeholder="Anything that would make the day easier">
+            </div>
+          </fieldset>
+          <button class="btn-rsvp btn-rsvp--send" type="submit">Send RSVP</button>
+        </form>
+
+        <div class="result" id="rsvp-result" tabindex="-1" hidden></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band band--sand" id="plan" aria-labelledby="plan-title">
+    <div class="wrap">
+      <header class="section-head reveal">
+        <p class="eyebrow">Plan ahead</p>
+        <h2 id="plan-title">Keep the day close</h2>
+      </header>
+      <div class="tiles">
+        <article class="tile reveal">
+          <p class="tile-label">Calendar</p>
+          <h3>Monday, October 26</h3>
+          <p class="tile-sub"><span data-field="ceremony.time" data-until="ceremony.endTime">2:30–4:30 PM</span> · Pacific time</p>
+          <div class="tile-actions">
+            <a class="btn btn-solid" id="cal-apple" href="wedding.ics">Apple Calendar</a>
+            <a class="btn btn-line" id="cal-google" href="https://calendar.google.com/calendar/render?action=TEMPLATE" target="_blank" rel="noopener">Google Calendar</a>
+            <a class="btn btn-line" id="cal-outlook" href="https://outlook.live.com/calendar/0/action/compose" target="_blank" rel="noopener">Outlook</a>
+          </div>
+        </article>
+        <article class="tile reveal">
+          <p class="tile-label">Location</p>
+          <h3>Santa Barbara Courthouse</h3>
+          <p class="tile-sub" id="address-line">1100 Anacapa St<br>Santa Barbara, CA 93101</p>
+          <div class="tile-actions">
+            <a class="btn btn-solid" id="map-apple" href="https://maps.apple.com/?q=Santa%20Barbara%20County%20Courthouse&amp;address=1100%20Anacapa%20St%2C%20Santa%20Barbara%2C%20CA%2093101" target="_blank" rel="noopener">Apple Maps</a>
+            <a class="btn btn-line" id="map-google" href="https://www.google.com/maps/search/?api=1&amp;query=Santa%20Barbara%20County%20Courthouse%2C%201100%20Anacapa%20St%2C%20Santa%20Barbara%2C%20CA%2093101" target="_blank" rel="noopener">Google Maps</a>
+            <button class="btn btn-line" type="button" data-copy="1100 Anacapa St, Santa Barbara, CA 93101" data-copy-target="#address-line">Copy address</button>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" id="faq" aria-labelledby="faq-title">
+    <div class="wrap">
+      <header class="section-head reveal">
+        <p class="eyebrow">FAQ</p>
+        <h2 id="faq-title">At the courthouse</h2>
+      </header>
+      <div class="faq reveal">
+        <details>
+          <summary>Which entrance do we use?</summary>
+          <div class="faq-a"><p>The main entrance under the Great Arch on Anacapa Street. After security, take the three steps on your right to the elevator and stairs. The Mural Room is on the second floor.</p></div>
+        </details>
+        <details>
+          <summary>What is security like?</summary>
+          <div class="faq-a"><p>Monday is a court day, so expect airport-style screening at the door. Shoes stay on, but belts with metal buckles go through the X-ray. Leave pocketknives (even keychain ones) and selfie sticks at home; they can be confiscated and aren’t returned.</p></div>
+        </details>
+        <details>
+          <summary>Where should I park?</summary>
+          <div class="faq-a"><p>City Lot 7 is directly across Anacapa Street. The first 75 minutes are free, then it’s $3 an hour. Street parking downtown is limited to 75 minutes and overtime is ticketed. Coming from the hotel? A rideshare skips parking entirely.</p></div>
+        </details>
+        <details>
+          <summary>Can I take photos?</summary>
+          <div class="faq-a"><p>Yes, please do. Just keep your flash off inside the Mural Room; flash photography isn’t allowed there.</p></div>
+        </details>
+        <details>
+          <summary>Can we toss petals or confetti?</summary>
+          <div class="faq-a"><p>Please don’t. The courthouse doesn’t allow petals (real or faux), confetti, rice, birdseed, glitter or sequins anywhere on the property.</p></div>
+        </details>
+        <details>
+          <summary>Can I bring a coffee or water?</summary>
+          <div class="faq-a"><p>Food and drinks, water bottles included, aren’t allowed in the Mural Room. The whole property is also smoke-free and vape-free.</p></div>
+        </details>
+        <details>
+          <summary>Is the Mural Room accessible?</summary>
+          <div class="faq-a"><p>An elevator goes to the second floor, and drivers with a disabled placard get the first 2½ hours free in city lots. Tell us about any needs in your RSVP and we’ll plan for them.</p></div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="band band--sand photos" id="photos" aria-labelledby="photos-title" data-optional="photoAlbumUrl">
+    <div class="wrap center reveal">
+      <p class="eyebrow">Photos</p>
+      <h2 id="photos-title">Share what you capture</h2>
+      <p class="lede">Add your photos and videos to our shared album, so we can see the day through your eyes.</p>
+      <a class="btn btn-line" id="album-link" href="#photos" target="_blank" rel="noopener">Open the shared album</a>
+      <p class="tbd-line" id="album-tbd"><span class="tbd">[Shared album link]</span></p>
+    </div>
+  </section>
+
+  <section class="band" id="guestbook" aria-labelledby="guestbook-title">
+    <div class="wrap">
+      <header class="section-head reveal">
+        <p class="eyebrow">Guestbook</p>
+        <h2 id="guestbook-title">Leave us a note</h2>
+        <p class="lede">A quick hello, a memory, a piece of advice. We’ll read every one.</p>
+      </header>
+      <form class="note-form reveal" id="note-form" name="guestbook" method="post" data-netlify="true" netlify-honeypot="bot-field" novalidate>
+        <input type="hidden" name="form-name" value="guestbook">
+        <p hidden><label>Leave this empty <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+        <div class="field">
+          <label class="field-label" for="note-name">Your name</label>
+          <input class="input" id="note-name" name="name" type="text" autocomplete="name" maxlength="80" required>
+          <p class="field-error" hidden></p>
+        </div>
+        <div class="field">
+          <label class="field-label" for="note-message">Your note</label>
+          <textarea class="input" id="note-message" name="message" rows="4" maxlength="600" required></textarea>
+          <p class="field-error" hidden></p>
+        </div>
+        <button class="btn btn-solid btn-wide" type="submit">Send note</button>
+      </form>
+      <div class="result center" id="note-result" tabindex="-1" hidden></div>
+    </div>
+  </section>
+
+  <footer class="closing">
+    <svg class="closing-seal" viewBox="0 0 120 120" aria-hidden="true" focusable="false">
+      <circle class="stamp-ring" cx="60" cy="60" r="46"/>
+      <circle class="stamp-ring stamp-ring--inner" cx="60" cy="60" r="40"/>
+      <text class="wax-mono" x="60" y="69" text-anchor="middle">A<tspan class="wax-amp" dx="1" dy="-1.5">&amp;</tspan><tspan dx="1" dy="1.5">A</tspan></text>
+    </svg>
+    <p class="closing-names">Ana <em>&amp;</em> Abraham</p>
+    <p class="closing-meta">10.26.2026 · Santa Barbara</p>
+    <button class="link-btn" id="replay" type="button">Open the envelope again</button>
+  </footer>
+</main>
+
+<div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+<script>
+(function () {
+  "use strict";
+  var root = document.documentElement;
+  var $ = function (s, r) { return (r || document).querySelector(s); };
+  var $$ = function (s, r) { return Array.prototype.slice.call((r || document).querySelectorAll(s)); };
+  var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var isApple = /iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent);
+  var enc = encodeURIComponent;
+  var store = {
+    get: function (k) { try { return localStorage.getItem(k); } catch (e) { return null; } },
+    set: function (k, v) { try { localStorage.setItem(k, v); } catch (e) {} }
+  };
+
+  var CFG = {};
+  try { CFG = JSON.parse($("#wedding-config").textContent); } catch (e) { console.error("The wedding details block is not valid JSON.", e); }
+  function get(path) {
+    return path.split(".").reduce(function (o, k) { return o == null ? undefined : o[k]; }, CFG);
+  }
+  function isTbd(v) { return typeof v === "string" && /^\s*\[.*\]\s*$/.test(v); }
+  function isSet(v) { return typeof v === "string" ? v.trim() !== "" && !isTbd(v) : v != null && v !== false; }
+  function el(tag, cls, text) {
+    var n = document.createElement(tag);
+    if (cls) n.className = cls;
+    if (text != null) n.textContent = text;
+    return n;
+  }
+  var pad = function (n) { return String(n).padStart(2, "0"); };
+  var couple = (CFG.couple ? CFG.couple.first + " & " + CFG.couple.second : "Ana & Abraham");
+  var dateDots = "10.26.2026";
+
+  /* ---------- Times ---------- */
+  function parseTime(v) {
+    if (!isSet(v)) return null;
+    var m = String(v).toLowerCase().replace(/[\s.]/g, "").match(/^(\d{1,2})(?::?(\d{2}))?(am|pm|a|p)?$/);
+    if (!m) return null;
+    var h = +m[1], min = m[2] ? +m[2] : 0, ap = m[3] ? m[3][0] : "";
+    if (min > 59 || h > 23) return null;
+    if (ap) {
+      if (h < 1 || h > 12) return null;
+      if (ap === "p" && h !== 12) h += 12;
+      if (ap === "a" && h === 12) h = 0;
+    }
+    return { h: h, min: min };
+  }
+  function fmtTime(t) { return (t.h % 12 || 12) + ":" + pad(t.min) + " " + (t.h < 12 ? "AM" : "PM"); }
+  function fmtRange(a, b) {
+    var sameHalf = (a.h < 12) === (b.h < 12);
+    return (sameHalf ? fmtTime(a).replace(/ [AP]M$/, "") : fmtTime(a)) + "–" + fmtTime(b);
+  }
+  function shiftTime(t, minutes) {
+    var total = (t.h * 60 + t.min + minutes + 1440) % 1440;
+    return { h: Math.floor(total / 60), min: total % 60 };
+  }
+
+  /* ---------- Fill in the details ---------- */
+  $$("[data-field]").forEach(function (node) {
+    var path = node.getAttribute("data-field");
+    var raw = get(path);
+    var t = /\.time$/.test(path) ? parseTime(raw) : null;
+    var until = node.hasAttribute("data-until") ? parseTime(get(node.getAttribute("data-until"))) : null;
+    node.textContent = t ? (until ? fmtRange(t, until) : fmtTime(t)) : (raw == null ? "" : String(raw));
+    node.classList.toggle("tbd", isTbd(raw));
+  });
+  $$("[data-optional]").forEach(function (node) {
+    var v = get(node.getAttribute("data-optional"));
+    if (v === "" || v == null) node.hidden = true;
+  });
+
+  var ceremony = parseTime(get("ceremony.time"));
+  if (ceremony) {
+    $("#arrive-note").textContent = "Please arrive 20–30 minutes early (" +
+      fmtRange(shiftTime(ceremony, -30), shiftTime(ceremony, -20)) + ") for security and seating.";
+  }
+
+  (function contact() {
+    var c = CFG.contact || {};
+    var line = $("#contact-line"), actions = $("#contact-actions");
+    function piece(v, fallback) { var s = el("span", isTbd(v) || !isSet(v) ? "tbd" : "", isSet(v) || isTbd(v) ? String(v) : fallback); return s; }
+    line.textContent = "";
+    line.append("Ask ", piece(c.name, "[Name]"));
+    var ways = [c.phone, c.email].filter(function (v) { return v !== "" && v != null; });
+    if (ways.length) {
+      line.append(" at ");
+      ways.forEach(function (w, i) { if (i) line.append(" or "); line.append(piece(w, "")); });
+    }
+    line.append(".");
+    if (isSet(c.phone)) {
+      var call = el("a", "chip", "Call");
+      call.href = "tel:" + String(c.phone).replace(/[^\d+]/g, "");
+      var copyPhone = el("button", "chip", "Copy number");
+      copyPhone.type = "button"; copyPhone.setAttribute("data-copy", c.phone);
+      actions.append(call, copyPhone);
+    }
+    if (isSet(c.email)) {
+      var copyEmail = el("button", "chip", "Copy email");
+      copyEmail.type = "button"; copyEmail.setAttribute("data-copy", c.email);
+      actions.append(copyEmail);
+    }
+    if (!actions.children.length) actions.hidden = true;
+  })();
+
+  /* ---------- Countdown ---------- */
+  var offset = CFG.utcOffset || "-07:00";
+  var target = new Date(CFG.date + "T" + (ceremony ? pad(ceremony.h) + ":" + pad(ceremony.min) : "00:00") + ":00" + offset);
+  var dayEnd = new Date(CFG.date + "T23:59:59" + offset);
+  var cd = { d: $("#cd-days"), h: $("#cd-hours"), m: $("#cd-mins"), s: $("#cd-secs") };
+  function tick() {
+    var now = Date.now();
+    var diff = target - now;
+    if (diff <= 0) {
+      $("#cd-grid").hidden = true;
+      var cap = $("#cd-caption");
+      cap.className = "cd-done";
+      cap.textContent = now <= dayEnd ? "Today is the day." : "Married October 26, 2026. Thank you for celebrating with us.";
+      return;
+    }
+    var s = Math.floor(diff / 1000);
+    cd.d.textContent = Math.floor(s / 86400);
+    cd.h.textContent = pad(Math.floor((s % 86400) / 3600));
+    cd.m.textContent = pad(Math.floor((s % 3600) / 60));
+    cd.s.textContent = pad(s % 60);
+    setTimeout(tick, 1000 - (now % 1000) + 15);
+  }
+  if (!isNaN(target)) tick();
+
+  /* ---------- Maps & calendar links ---------- */
+  var address = get("ceremony.address") || "1100 Anacapa St, Santa Barbara, CA 93101";
+  var placeName = "Santa Barbara County Courthouse";
+  var appleMaps = "https://maps.apple.com/?q=" + enc(placeName) + "&address=" + enc(address);
+  var googleMaps = "https://www.google.com/maps/search/?api=1&query=" + enc(placeName + ", " + address);
+  $("#map-apple").href = appleMaps;
+  $("#map-google").href = googleMaps;
+  $("#open-maps").href = isApple ? appleMaps : googleMaps;
+
+  var eventTitle = couple + "’s Wedding";
+  var eventPlace = placeName + ", Mural Room, " + address;
+  var dinnerVenue = get("dinner.venue");
+  var eventNotes = "Ceremony in the Mural Room (second floor) of the Santa Barbara Courthouse. Please arrive 20–30 minutes early for security and seating. " +
+    (isSet(dinnerVenue) ? "Dinner follows at " + dinnerVenue + "." : "Dinner follows the ceremony and photos.") +
+    (isSet(CFG.siteUrl) ? "\n\nDetails and RSVP: " + CFG.siteUrl : "");
+  var ymd = String(CFG.date).replace(/-/g, "");
+  var next = new Date(CFG.date + "T12:00:00Z"); next.setUTCDate(next.getUTCDate() + 1);
+  var nextYmd = next.toISOString().slice(0, 10);
+  var gDates, oStart, oEnd, allDay;
+  if (ceremony) {
+    var endTime = parseTime(get("ceremony.endTime"));
+    var minutes = endTime ? endTime.h * 60 + endTime.min - (ceremony.h * 60 + ceremony.min) : 0;
+    var end = new Date(target.getTime() + (minutes > 0 ? minutes : Number(get("ceremony.minutes")) || 60) * 60000);
+    var zulu = function (d) { return d.toISOString().replace(/[-:]/g, "").replace(/\.\d{3}/, ""); };
+    gDates = zulu(target) + "/" + zulu(end);
+    oStart = target.toISOString(); oEnd = end.toISOString(); allDay = false;
+  } else {
+    gDates = ymd + "/" + nextYmd.replace(/-/g, "");
+    oStart = CFG.date; oEnd = nextYmd; allDay = true;
+  }
+  var googleCal = "https://calendar.google.com/calendar/render?action=TEMPLATE&text=" + enc(eventTitle) +
+    "&dates=" + gDates + "&details=" + enc(eventNotes) + "&location=" + enc(eventPlace) + "&ctz=America/Los_Angeles";
+  var outlookCal = "https://outlook.live.com/calendar/0/action/compose?rru=addevent&subject=" + enc(eventTitle) +
+    "&startdt=" + enc(oStart) + "&enddt=" + enc(oEnd) + "&allday=" + allDay + "&location=" + enc(eventPlace) + "&body=" + enc(eventNotes);
+  $("#cal-google").href = googleCal;
+  $("#cal-outlook").href = outlookCal;
+  // The claude.ai preview can't serve .ics files; the hosted site has wedding.ics next to the page.
+  var hasIcs = !("claude" in window);
+  if (!hasIcs) {
+    $("#cal-apple").hidden = true;
+    $("#cal-google").className = "btn btn-solid";
+  }
+  var quickCal = $("#quick-cal");
+  if (isApple && hasIcs) {
+    quickCal.href = "wedding.ics";
+  } else {
+    quickCal.href = googleCal;
+    quickCal.target = "_blank";
+    quickCal.rel = "noopener";
+  }
+
+  /* ---------- Photos ---------- */
+  var album = get("photoAlbumUrl");
+  if (isSet(album)) {
+    $("#album-link").href = album;
+    $("#album-tbd").hidden = true;
+  } else {
+    $("#album-link").setAttribute("aria-disabled", "true");
+    $("#album-tbd").firstElementChild.textContent = isTbd(album) ? album : "[Shared album link]";
+  }
+
+  /* ---------- Haptics ---------- */
+  function haptic() {
+    try { if (navigator.vibrate && navigator.vibrate(10)) return; } catch (e) {}
+    // iOS Safari has no vibrate API; toggling a switch control plays the system tick (iOS 18+).
+    try {
+      var label = document.createElement("label");
+      var input = document.createElement("input");
+      label.setAttribute("aria-hidden", "true");
+      label.style.display = "none";
+      input.type = "checkbox";
+      input.setAttribute("switch", "");
+      label.appendChild(input);
+      document.body.appendChild(label);
+      label.click();
+      label.remove();
+    } catch (e) {}
+  }
+
+  /* ---------- Envelope ---------- */
+  var stage = $("#stage"), main = $("#main");
+  var wait = function (ms) { return new Promise(function (r) { setTimeout(r, ms); }); };
+  var opening = false;
+  function markOpen() {
+    root.classList.add("is-open");
+    setTimeout(function () { root.classList.add("rise-done"); }, 2600);
+  }
+  function openEnvelope() {
+    if (opening || !root.classList.contains("show-envelope")) return;
+    opening = true;
+    haptic();
+    store.set("aa-opened", "1");
+    var steps = reduceMotion
+      ? Promise.resolve().then(function () { stage.classList.add("is-leaving"); markOpen(); return wait(380); })
+      : Promise.resolve()
+          .then(function () { stage.classList.add("is-cracking"); return wait(380); })
+          .then(function () { stage.classList.add("is-flap-open"); return wait(400); })
+          .then(function () { stage.classList.add("is-flap-behind"); return wait(250); })
+          .then(function () { stage.classList.add("is-letter-out"); return wait(850); })
+          .then(function () { stage.classList.add("is-leaving"); markOpen(); return wait(950); });
+    steps.then(function () {
+      root.classList.remove("show-envelope");
+      stage.className = "stage";
+      main.inert = false;
+      $("#title").focus({ preventScroll: true });
+      opening = false;
+    });
+  }
+  function showEnvelope() {
+    window.scrollTo(0, 0);
+    stage.className = "stage";
+    root.classList.remove("is-open", "rise-done");
+    root.classList.add("show-envelope");
+    main.inert = true;
+    setTimeout(function () { $("#seal").focus({ preventScroll: true }); }, 60);
+  }
+  $("#seal").addEventListener("click", function (e) { e.stopPropagation(); openEnvelope(); });
+  $("#envelope").addEventListener("click", openEnvelope);
+  $("#replay").addEventListener("click", showEnvelope);
+  if (root.classList.contains("show-envelope")) main.inert = true;
+  else markOpen();
+
+  /* ---------- Scroll reveal & parallax ---------- */
+  if ("IntersectionObserver" in window && !reduceMotion) {
+    root.classList.add("has-io");
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) { entry.target.classList.add("is-in"); io.unobserve(entry.target); }
+      });
+    }, { rootMargin: "0px 0px -8% 0px", threshold: 0.12 });
+    $$(".reveal").forEach(function (n) { io.observe(n); });
+  }
+  var art = $(".hero-art");
+  if (art && !reduceMotion) {
+    var queued = false;
+    window.addEventListener("scroll", function () {
+      if (queued) return;
+      queued = true;
+      requestAnimationFrame(function () {
+        queued = false;
+        art.style.transform = "translate3d(0," + (Math.min(window.scrollY, 1200) * 0.22).toFixed(1) + "px,0)";
+      });
+    }, { passive: true });
+  }
+
+  /* ---------- Copy & toast ---------- */
+  var toast = $("#toast"), toastTimer;
+  function say(msg) {
+    toast.textContent = msg;
+    toast.hidden = false;
+    requestAnimationFrame(function () { toast.classList.add("is-on"); });
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function () {
+      toast.classList.remove("is-on");
+      setTimeout(function () { toast.hidden = true; }, 300);
+    }, 2200);
+  }
+  function selectText(node) {
+    var range = document.createRange();
+    range.selectNodeContents(node);
+    var sel = window.getSelection();
+    sel.removeAllRanges();
+    sel.addRange(range);
+  }
+  document.addEventListener("click", function (e) {
+    var b = e.target.closest ? e.target.closest("[data-copy]") : null;
+    if (!b) return;
+    var text = b.getAttribute("data-copy");
+    var fallback = b.getAttribute("data-copy-target");
+    var done = function () { say("Copied"); };
+    var fail = function () {
+      if (fallback && $(fallback)) { selectText($(fallback)); say("Text selected. Copy it from here."); }
+      else say("Copying isn’t available here");
+    };
+    try { navigator.clipboard.writeText(text).then(done, fail); } catch (err) { fail(); }
+  });
+
+  /* ---------- Sending replies ---------- */
+  function phoneDigits(v) {
+    if (!isSet(v)) return "";
+    var d = String(v).replace(/\D/g, "");
+    return d.length === 10 ? "1" + d : d;
+  }
+  function deliver(form, subject) {
+    var endpoint = String(get("rsvp.endpoint") || "").trim();
+    if (!endpoint) return Promise.resolve({ sent: false });
+    var data = new FormData(form);
+    var request;
+    if (endpoint.toLowerCase() === "netlify") {
+      request = fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams(data).toString()
+      });
+    } else {
+      var body = {};
+      data.forEach(function (v, k) { if (k !== "bot-field") body[k] = v; });
+      body._subject = subject;
+      request = fetch(endpoint, {
+        method: "POST",
+        headers: { "Content-Type": "application/json", "Accept": "application/json" },
+        body: JSON.stringify(body)
+      });
+    }
+    return request.then(function (res) { return { sent: res.ok, failed: !res.ok }; }, function () { return { sent: false, failed: true }; });
+  }
+  function sendPanel(box, o) {
+    var phone = phoneDigits(get("contact.phone"));
+    var email = isSet(get("contact.email")) ? String(get("contact.email")).trim() : "";
+    var who = isSet(get("contact.name")) ? get("contact.name") : couple;
+    box.append(
+      el("p", "result-title", o.failed ? "That didn’t go through" : "One more step"),
+      el("p", "result-text", (o.failed ? "Please send it as a message instead. " : "") +
+        "Choose how to send it to " + who + ". Your app opens with the message written; tap Send there.")
+    );
+    var actions = el("div", "send-actions");
+    var wa = el("a", "btn btn-solid", "Send on WhatsApp");
+    wa.href = "https://wa.me/" + phone + "?text=" + enc(o.message);
+    wa.target = "_blank"; wa.rel = "noopener";
+    var sms = el("a", "btn btn-line", "Send by text message");
+    sms.href = "sms:" + (phone ? "+" + phone : "") + (isApple ? "&" : "?") + "body=" + enc(o.message);
+    var mail = el("a", "btn btn-line", "Send by email");
+    mail.href = "mailto:" + email + "?subject=" + enc(o.subject) + "&body=" + enc(o.message);
+    actions.append(wa, sms, mail);
+    var preview = el("pre", "send-preview", o.message);
+    preview.id = box.id + "-message";
+    var copy = el("button", "link-btn", "Copy the message instead");
+    copy.type = "button";
+    copy.setAttribute("data-copy", o.message);
+    copy.setAttribute("data-copy-target", "#" + preview.id);
+    box.append(actions, preview, copy);
+  }
+  function setError(input, msg) {
+    var field = input.closest(".field");
+    var err = field ? field.querySelector(".field-error") : null;
+    if (msg) input.setAttribute("aria-invalid", "true"); else input.removeAttribute("aria-invalid");
+    if (err) {
+      err.textContent = msg || "";
+      err.hidden = !msg;
+      if (msg) { err.id = err.id || input.id + "-error"; input.setAttribute("aria-describedby", err.id); }
+    }
+  }
+  function show(box) {
+    box.hidden = false;
+    box.classList.remove("is-entering");
+    void box.offsetWidth;
+    box.classList.add("is-entering");
+    box.focus({ preventScroll: true });
+    box.scrollIntoView({ behavior: reduceMotion ? "auto" : "smooth", block: "center" });
+  }
+
+  [$("#rsvp-form"), $("#note-form")].forEach(function (f) {
+    f.addEventListener("input", function (e) {
+      if (e.target.getAttribute("aria-invalid") === "true") setError(e.target, "");
+    });
+  });
+
+  /* ---------- RSVP ---------- */
+  var form = $("#rsvp-form"), more = $("#rsvp-more"), result = $("#rsvp-result");
+  var openBtn = $("#rsvp-open"), saved = $("#rsvp-saved");
+  var fields = form.elements;
+
+  function loadSaved() { try { return JSON.parse(store.get("aa-rsvp") || "null"); } catch (e) { return null; } }
+  function syncAttending() {
+    var yes = fields.attending.value === "yes";
+    more.hidden = !yes;
+    more.disabled = !yes;
+  }
+  function fill(r) {
+    if (!r) return;
+    fields.name.value = r.name || "";
+    fields.contact.value = r.contact || "";
+    if (r.attending === true) $("#rsvp-yes").checked = true;
+    if (r.attending === false) $("#rsvp-no").checked = true;
+    fields.guests.value = r.guests || 1;
+    if (r.hotel === "yes") $("#rsvp-hotel-yes").checked = true;
+    if (r.hotel === "no") $("#rsvp-hotel-no").checked = true;
+    fields.dietary.value = r.dietary || "";
+    fields.accessibility.value = r.accessibility || "";
+  }
+  function showSaved() {
+    var prev = loadSaved();
+    if (!prev || !prev.name) return;
+    saved.textContent = "";
+    saved.append("Your last reply from this device: ",
+      el("strong", "", prev.attending ? "attending, " + prev.guests + (prev.guests === 1 ? " guest" : " guests") : "not attending"), ".");
+    saved.hidden = false;
+    openBtn.textContent = "Update RSVP";
+  }
+  function openForm(prefill, viaKeyboard) {
+    haptic();
+    openBtn.hidden = true;
+    openBtn.setAttribute("aria-expanded", "true");
+    saved.hidden = true;
+    result.hidden = true;
+    fill(prefill);
+    syncAttending();
+    form.hidden = false;
+    form.classList.remove("is-entering");
+    void form.offsetWidth;
+    form.classList.add("is-entering");
+    if (viaKeyboard) fields.name.focus({ preventScroll: true });
+    $("#rsvp-title").scrollIntoView({ behavior: reduceMotion ? "auto" : "smooth", block: "start" });
+  }
+  openBtn.addEventListener("click", function (e) { openForm(loadSaved(), e.detail === 0); });
+  form.addEventListener("change", function (e) {
+    if (e.target.name === "attending") { syncAttending(); $("#attending-error").hidden = true; }
+  });
+  form.addEventListener("click", function (e) {
+    var b = e.target.closest("[data-step]");
+    if (!b) return;
+    var input = fields.guests;
+    input.value = Math.min(10, Math.max(1, (parseInt(input.value, 10) || 1) + Number(b.getAttribute("data-step"))));
+  });
+  function validate() {
+    var first = null;
+    var name = fields.name, contactInput = fields.contact;
+    var nameOk = name.value.trim().length >= 2;
+    setError(name, nameOk ? "" : "Please add your full name.");
+    if (!nameOk) first = first || name;
+    var c = contactInput.value.trim();
+    var contactOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(c) || c.replace(/\D/g, "").length >= 7;
+    setError(contactInput, contactOk ? "" : "Add an email address or phone number so we can reach you.");
+    if (!contactOk) first = first || contactInput;
+    var attErr = $("#attending-error");
+    if (!fields.attending.value) {
+      attErr.textContent = "Let us know whether you can make it.";
+      attErr.hidden = false;
+      first = first || $("#rsvp-yes");
+    } else attErr.hidden = true;
+    if (fields.attending.value === "yes") {
+      var g = parseInt(fields.guests.value, 10);
+      var gOk = g >= 1 && g <= 10;
+      setError(fields.guests, gOk ? "" : "Choose between 1 and 10 guests.");
+      if (!gOk) first = first || fields.guests;
+    }
+    if (first) { first.focus(); return false; }
+    return true;
+  }
+  function collect() {
+    var yes = fields.attending.value === "yes";
+    return {
+      name: fields.name.value.trim(),
+      contact: fields.contact.value.trim(),
+      attending: yes,
+      guests: yes ? Math.max(1, parseInt(fields.guests.value, 10) || 1) : 0,
+      hotel: yes ? (fields.hotel.value || "") : "",
+      dietary: yes ? fields.dietary.value.trim() : "",
+      accessibility: yes ? fields.accessibility.value.trim() : ""
+    };
+  }
+  function rsvpMessage(r) {
+    var lines = ["RSVP · " + couple + " · " + dateDots, "", "Name: " + r.name];
+    if (r.attending) {
+      lines.push("Attending: Yes");
+      lines.push("Guests (including me): " + r.guests);
+      lines.push("Hotel room, Oct 25–27: " + (r.hotel === "yes" ? "Yes, please" : r.hotel === "no" ? "No, thank you" : "Not sure yet"));
+      lines.push("Dietary restrictions: " + (r.dietary || "None"));
+      lines.push("Accessibility needs: " + (r.accessibility || "None"));
+    } else {
+      lines.push("Attending: No, with regrets");
+    }
+    lines.push("Contact: " + r.contact);
+    return lines.join("\n");
+  }
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    haptic();
+    if (!validate()) return;
+    if (form.querySelector("[name='bot-field']").value) return;
+    var r = collect();
+    var submit = form.querySelector("[type='submit']");
+    submit.disabled = true;
+    submit.textContent = "Sending…";
+    deliver(form, "RSVP: " + r.name).then(function (res) {
+      submit.disabled = false;
+      submit.textContent = "Send RSVP";
+      r.at = Date.now();
+      store.set("aa-rsvp", JSON.stringify(r));
+      form.hidden = true;
+      result.textContent = "";
+      var first = r.name.split(/\s+/)[0];
+      if (res.sent) {
+        result.append(
+          el("p", "result-title", r.attending ? "Thank you, " + first + "." : "Thank you for letting us know, " + first + "."),
+          el("p", "result-text", r.attending ? "Your RSVP is in. We can’t wait to celebrate with you." : "We’ll miss you, and we’re grateful you replied.")
+        );
+      } else {
+        sendPanel(result, { message: rsvpMessage(r), subject: "RSVP: " + r.name, failed: res.failed });
+      }
+      var change = el("button", "link-btn", "Change my reply");
+      change.type = "button";
+      change.addEventListener("click", function () { openForm(r, false); });
+      result.append(change);
+      show(result);
+    });
+  });
+  showSaved();
+
+  /* ---------- Guestbook ---------- */
+  var noteForm = $("#note-form"), noteResult = $("#note-result");
+  noteForm.addEventListener("submit", function (e) {
+    e.preventDefault();
+    var name = noteForm.elements.name, msg = noteForm.elements.message;
+    var nameOk = name.value.trim().length > 0, msgOk = msg.value.trim().length > 1;
+    setError(name, nameOk ? "" : "Please add your name.");
+    setError(msg, msgOk ? "" : "Write a few words first.");
+    if (!nameOk) { name.focus(); return; }
+    if (!msgOk) { msg.focus(); return; }
+    if (noteForm.querySelector("[name='bot-field']").value) return;
+    var who = name.value.trim(), text = msg.value.trim();
+    var submit = noteForm.querySelector("[type='submit']");
+    submit.disabled = true;
+    deliver(noteForm, "A note from " + who).then(function (res) {
+      submit.disabled = false;
+      noteResult.textContent = "";
+      noteForm.hidden = true;
+      if (res.sent) {
+        noteResult.append(el("p", "result-title", "Thank you, " + who.split(/\s+/)[0] + "."),
+          el("p", "result-text", "Your note is on its way to " + couple + "."));
+        noteForm.reset();
+      } else {
+        sendPanel(noteResult, {
+          message: "A note for " + couple + "\n\n“" + text + "”\n\n— " + who,
+          subject: "A note from " + who,
+          failed: res.failed
+        });
+      }
+      var again = el("button", "link-btn", res.sent ? "Write another note" : "Edit my note");
+      again.type = "button";
+      again.addEventListener("click", function () { noteResult.hidden = true; noteForm.hidden = false; msg.focus(); });
+      noteResult.append(again);
+      show(noteResult);
+    });
+  });
+
+  window.__inviteReady = true;
+})();
+</script>
+</body>
+</html>

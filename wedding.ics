@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Ana & Abraham//Wedding invitation//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:wedding-2026-10-26@abraham-ana.com
+DTSTAMP:20261015T063418Z
+DTSTART:20261026T213000Z
+DTEND:20261026T233000Z
+SUMMARY:Ana & Abraham’s Wedding
+LOCATION:Santa Barbara County Courthouse\, Mural Room\, 1100 Anacapa St\, S
+ anta Barbara\, CA 93101
+DESCRIPTION:Ceremony in the Mural Room (second floor) of the Santa Barbara 
+ Courthouse. Please arrive 20–30 minutes early for security and seating. 
+ Dinner follows the ceremony and photos.\n\nDetails and RSVP: https://abrah
+ am-ana.com/
+URL:https://abraham-ana.com/
+BEGIN:VALARM
+ACTION:DISPLAY
+TRIGGER:-P1D
+DESCRIPTION:Tomorrow: Ana & Abraham’s wedding
+END:VALARM
+END:VEVENT
+END:VCALENDAR
