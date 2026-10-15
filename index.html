@@ -527,10 +527,10 @@ textarea.input { min-height: 128px; resize: vertical; }
     "endTime": "4:30 PM",
     "address": "1100 Anacapa St, Santa Barbara, CA 93101"
   },
-  "welcomeDinner": { "time": "[Time]" },
+  "welcomeDinner": { "time": "8:00 PM", "venue": "Loquita", "address": "202 State St, Santa Barbara, CA 93101" },
   "dinner": { "venue": "Olio e Limone", "address": "11 W Victoria St, Santa Barbara, CA 93101", "time": "5:30 PM" },
   "hotel": { "name": "Hilton Santa Barbara Beachfront Resort", "address": "633 E Cabrillo Blvd, Santa Barbara, CA 93103" },
-  "contact": { "name": "Abraham Gomez", "phone": "\u002b\u0031\u0020\u0036\u0032\u0038\u0020\u0035\u0038\u0037\u0020\u0033\u0037\u0032\u0037", "email": "" },
+  "contact": { "name": "Abraham", "phone": "\u002b\u0031\u0020\u0036\u0032\u0038\u0020\u0035\u0038\u0037\u0020\u0033\u0037\u0032\u0037", "email": "" },
   "rsvp": { "deadline": "October 25", "endpoint": "" },
   "photoAlbumUrl": "[Shared album link]",
   "siteUrl": "https://abraham-ana.com/"
@@ -684,6 +684,12 @@ textarea.input { min-height: 128px; resize: vertical; }
           <div class="chips"><a class="chip" id="hotel-map" href="#expect" target="_blank" rel="noopener">Hotel directions</a></div>
         </article>
         <article class="expect-item reveal">
+          <h3>Welcome Dinner</h3>
+          <p>On Sunday night, join us for a welcome dinner at <span data-field="welcomeDinner.venue">Loquita</span>, a Spanish tapas restaurant a short rideshare from the Hilton.</p>
+          <p class="item-note"><span data-field="welcomeDinner.time">8:00 PM</span> · <span data-field="welcomeDinner.address">202 State St, Santa Barbara, CA 93101</span></p>
+          <div class="chips"><a class="chip" id="welcome-map" href="#expect" target="_blank" rel="noopener">Directions</a></div>
+        </article>
+        <article class="expect-item reveal">
           <h3>Ceremony</h3>
           <p>Monday, Oct 26 at the Santa Barbara Courthouse — Mural Room. Please arrive 20–30 minutes early for security and seating.</p>
         </article>
@@ -712,7 +718,7 @@ textarea.input { min-height: 128px; resize: vertical; }
         </article>
         <article class="expect-item reveal">
           <h3>Questions</h3>
-          <p id="contact-line">Ask Abraham Gomez.</p>
+          <p id="contact-line">Ask Abraham.</p>
           <div class="contact-actions" id="contact-actions"></div>
         </article>
       </div>
@@ -732,7 +738,7 @@ textarea.input { min-height: 128px; resize: vertical; }
             <h3>Sunday, October 25</h3>
             <ul class="events">
               <li><span class="ev-time">From 4 PM</span><span>Hotel check-in at <span data-field="hotel.name">Hilton Santa Barbara Beachfront Resort</span></span></li>
-              <li data-optional="welcomeDinner.time"><span class="ev-time tbd" data-field="welcomeDinner.time">[Time]</span><span>Welcome dinner</span></li>
+              <li data-optional="welcomeDinner.time"><span class="ev-time" data-field="welcomeDinner.time">8:00 PM</span><span>Welcome dinner at <span data-field="welcomeDinner.venue">Loquita</span></span></li>
             </ul>
           </div>
         </li>
@@ -1086,7 +1092,7 @@ textarea.input { min-height: 128px; resize: vertical; }
       ? "https://maps.apple.com/?q=" + enc(name) + "&address=" + enc(addr)
       : "https://www.google.com/maps/search/?api=1&query=" + enc(name + ", " + addr);
   }
-  [["#hotel-map", get("hotel.name"), get("hotel.address")], ["#dinner-map", get("dinner.venue"), get("dinner.address")]].forEach(function (d) {
+  [["#hotel-map", get("hotel.name"), get("hotel.address")], ["#welcome-map", get("welcomeDinner.venue"), get("welcomeDinner.address")], ["#dinner-map", get("dinner.venue"), get("dinner.address")]].forEach(function (d) {
     var link = $(d[0]);
     if (!link) return;
     if (isSet(d[1]) && isSet(d[2])) link.href = directions(d[1], d[2]);
