@@ -21,6 +21,7 @@
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <title>Ana &amp; Abraham — 10.26.2026</title>
 <meta name="description" content="Join us at the Santa Barbara Courthouse.">
+<meta name="robots" content="noindex, nofollow, noarchive">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:ital,wght@0,400;1,400&display=swap">
@@ -313,7 +314,8 @@ h2 { font-size: clamp(2rem, 8.4vw, 2.6rem); line-height: 1.1; letter-spacing: -.
 .swatch--white { background: var(--paper); }
 .swatch--beige { background: var(--beige); }
 .swatch--black { background: var(--ink); border-color: var(--ink); }
-.contact-actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+.contact-actions, .chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+.item-note { margin-top: 10px; font-size: .95rem; color: var(--ink-soft); }
 
 /* ---------- Schedule ---------- */
 .timeline { margin: 0; padding: 0; list-style: none; }
@@ -516,7 +518,7 @@ textarea.input { min-height: 128px; resize: vertical; }
 </script>
 <script type="application/json" id="wedding-config">
 {
-  "_note": "Replace every [bracketed] value. Write times like 4:30 PM; ceremony.endTime is when the Mural Room booking ends. rsvp.endpoint: leave empty and guests send their RSVP by WhatsApp, text or email; or set a Formspree form URL, or the word netlify when hosting on Netlify. Set photoAlbumUrl to an empty string to hide the photo section.",
+  "_note": "Replace every [bracketed] value. Write times like 4:30 PM; ceremony.endTime is when the Mural Room booking ends. rsvp.endpoint: leave empty and guests send their RSVP by WhatsApp, text or email; or set a Formspree form URL, or the word netlify when hosting on Netlify. Set photoAlbumUrl to an empty string to hide the photo section. contact.phone is written in \\u escapes so the number never appears as plain text in the public source.",
   "couple": { "first": "Ana", "second": "Abraham" },
   "date": "2026-10-26",
   "utcOffset": "-07:00",
@@ -526,10 +528,10 @@ textarea.input { min-height: 128px; resize: vertical; }
     "address": "1100 Anacapa St, Santa Barbara, CA 93101"
   },
   "welcomeDinner": { "time": "[Time]" },
-  "dinner": { "venue": "[Dinner Venue]", "time": "[Time]" },
-  "hotel": { "name": "Hilton Santa Barbara Beachfront Resort" },
-  "contact": { "name": "[Name]", "phone": "[Phone]", "email": "[Email]" },
-  "rsvp": { "deadline": "[Date]", "endpoint": "" },
+  "dinner": { "venue": "Olio e Limone", "address": "11 W Victoria St, Santa Barbara, CA 93101", "time": "5:30 PM" },
+  "hotel": { "name": "Hilton Santa Barbara Beachfront Resort", "address": "633 E Cabrillo Blvd, Santa Barbara, CA 93103" },
+  "contact": { "name": "Abraham Gomez", "phone": "\u002b\u0031\u0020\u0036\u0032\u0038\u0020\u0035\u0038\u0037\u0020\u0033\u0037\u0032\u0037", "email": "" },
+  "rsvp": { "deadline": "October 25", "endpoint": "" },
   "photoAlbumUrl": "[Shared album link]",
   "siteUrl": "https://abraham-ana.com/"
 }
@@ -678,6 +680,8 @@ textarea.input { min-height: 128px; resize: vertical; }
         <article class="expect-item reveal">
           <h3>Hotel &amp; Meals</h3>
           <p>We are hosting everyone for Sunday night (Oct 25) and Monday night (Oct 26) at <span data-field="hotel.name">Hilton Santa Barbara Beachfront Resort</span>. Check-in Sunday afternoon, check-out Tuesday morning. All hotel and food costs are covered.</p>
+          <p class="item-note" data-optional="hotel.address"><span data-field="hotel.address">633 E Cabrillo Blvd, Santa Barbara, CA 93103</span></p>
+          <div class="chips"><a class="chip" id="hotel-map" href="#expect" target="_blank" rel="noopener">Hotel directions</a></div>
         </article>
         <article class="expect-item reveal">
           <h3>Ceremony</h3>
@@ -685,7 +689,13 @@ textarea.input { min-height: 128px; resize: vertical; }
         </article>
         <article class="expect-item reveal">
           <h3>Dinner</h3>
-          <p>After the ceremony and photos, join us for dinner at <span class="tbd" data-field="dinner.venue">[Dinner Venue]</span>.</p>
+          <p>After the ceremony and photos, join us for dinner at <span data-field="dinner.venue">Olio e Limone</span>, a short walk from the courthouse.</p>
+          <p class="item-note"><span data-field="dinner.time">5:30 PM</span> · <span data-field="dinner.address">11 W Victoria St, Santa Barbara, CA 93101</span></p>
+          <div class="chips"><a class="chip" id="dinner-map" href="#expect" target="_blank" rel="noopener">Walking directions</a></div>
+        </article>
+        <article class="expect-item reveal">
+          <h3>Getting Around</h3>
+          <p>Rideshare is the easiest way between the Hilton and the courthouse, about 10 minutes each way. Ask to be dropped off at 1100 Anacapa St, by the Great Arch.</p>
         </article>
         <article class="expect-item reveal">
           <h3>Attire</h3>
@@ -697,8 +707,12 @@ textarea.input { min-height: 128px; resize: vertical; }
           </ul>
         </article>
         <article class="expect-item reveal">
+          <h3>Gifts</h3>
+          <p>No gifts, please. Your presence is gift enough.</p>
+        </article>
+        <article class="expect-item reveal">
           <h3>Questions</h3>
-          <p id="contact-line">Ask <span class="tbd">[Name]</span> at <span class="tbd">[Phone]</span> or <span class="tbd">[Email]</span>.</p>
+          <p id="contact-line">Ask Abraham Gomez.</p>
           <div class="contact-actions" id="contact-actions"></div>
         </article>
       </div>
@@ -717,7 +731,7 @@ textarea.input { min-height: 128px; resize: vertical; }
           <div>
             <h3>Sunday, October 25</h3>
             <ul class="events">
-              <li><span class="ev-time">Afternoon</span><span>Hotel check-in at <span data-field="hotel.name">Hilton Santa Barbara Beachfront Resort</span></span></li>
+              <li><span class="ev-time">From 4 PM</span><span>Hotel check-in at <span data-field="hotel.name">Hilton Santa Barbara Beachfront Resort</span></span></li>
               <li data-optional="welcomeDinner.time"><span class="ev-time tbd" data-field="welcomeDinner.time">[Time]</span><span>Welcome dinner</span></li>
             </ul>
           </div>
@@ -728,7 +742,7 @@ textarea.input { min-height: 128px; resize: vertical; }
             <h3>Monday, October 26</h3>
             <ul class="events">
               <li><span class="ev-time" data-field="ceremony.time" data-until="ceremony.endTime">2:30–4:30 PM</span><span>Wedding at the Mural Room, Santa Barbara Courthouse</span></li>
-              <li><span class="ev-time tbd" data-field="dinner.time">[Time]</span><span>Dinner at <span class="tbd" data-field="dinner.venue">[Dinner Venue]</span></span></li>
+              <li><span class="ev-time" data-field="dinner.time">5:30 PM</span><span>Dinner at <span data-field="dinner.venue">Olio e Limone</span></span></li>
             </ul>
           </div>
         </li>
@@ -737,7 +751,7 @@ textarea.input { min-height: 128px; resize: vertical; }
           <div>
             <h3>Tuesday, October 27</h3>
             <ul class="events">
-              <li><span class="ev-time">Morning</span><span>Hotel check-out</span></li>
+              <li><span class="ev-time">By 12 PM</span><span>Hotel check-out</span></li>
             </ul>
           </div>
         </li>
@@ -752,7 +766,7 @@ textarea.input { min-height: 128px; resize: vertical; }
       <div class="arch reveal">
         <p class="eyebrow">RSVP</p>
         <h2 id="rsvp-title">Will you join us?</h2>
-        <p class="rsvp-by">Kindly reply by <span class="tbd" data-field="rsvp.deadline">[Date]</span>.</p>
+        <p class="rsvp-by">Kindly reply by <span data-field="rsvp.deadline">October 25</span>.</p>
         <p class="rsvp-saved" id="rsvp-saved" hidden></p>
         <button class="btn-rsvp" id="rsvp-open" type="button" aria-expanded="false" aria-controls="rsvp-form">RSVP</button>
 
@@ -1021,9 +1035,11 @@ textarea.input { min-height: 128px; resize: vertical; }
     if (isSet(c.phone)) {
       var call = el("a", "chip", "Call");
       call.href = "tel:" + String(c.phone).replace(/[^\d+]/g, "");
+      var text = el("a", "chip", "Text");
+      text.href = "sms:" + String(c.phone).replace(/[^\d+]/g, "");
       var copyPhone = el("button", "chip", "Copy number");
       copyPhone.type = "button"; copyPhone.setAttribute("data-copy", c.phone);
-      actions.append(call, copyPhone);
+      actions.append(call, text, copyPhone);
     }
     if (isSet(c.email)) {
       var copyEmail = el("button", "chip", "Copy email");
@@ -1065,6 +1081,17 @@ textarea.input { min-height: 128px; resize: vertical; }
   $("#map-apple").href = appleMaps;
   $("#map-google").href = googleMaps;
   $("#open-maps").href = isApple ? appleMaps : googleMaps;
+  function directions(name, addr) {
+    return isApple
+      ? "https://maps.apple.com/?q=" + enc(name) + "&address=" + enc(addr)
+      : "https://www.google.com/maps/search/?api=1&query=" + enc(name + ", " + addr);
+  }
+  [["#hotel-map", get("hotel.name"), get("hotel.address")], ["#dinner-map", get("dinner.venue"), get("dinner.address")]].forEach(function (d) {
+    var link = $(d[0]);
+    if (!link) return;
+    if (isSet(d[1]) && isSet(d[2])) link.href = directions(d[1], d[2]);
+    else link.parentNode.hidden = true;
+  });
 
   var eventTitle = couple + "’s Wedding";
   var eventPlace = placeName + ", Mural Room, " + address;
@@ -1280,7 +1307,8 @@ textarea.input { min-height: 128px; resize: vertical; }
     sms.href = "sms:" + (phone ? "+" + phone : "") + (isApple ? "&" : "?") + "body=" + enc(o.message);
     var mail = el("a", "btn btn-line", "Send by email");
     mail.href = "mailto:" + email + "?subject=" + enc(o.subject) + "&body=" + enc(o.message);
-    actions.append(wa, sms, mail);
+    actions.append(wa, sms);
+    if (email) actions.append(mail);
     var preview = el("pre", "send-preview", o.message);
     preview.id = box.id + "-message";
     var copy = el("button", "link-btn", "Copy the message instead");
